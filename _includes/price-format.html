@@ -1,0 +1,8 @@
+{% case language %}
+  {% when "be" %}
+    £{{include.price}}
+  {% when "nl" %}
+    €{{include.price}}
+  {% when "uk" %}
+    £{{include.price}}
+{% endcase %}

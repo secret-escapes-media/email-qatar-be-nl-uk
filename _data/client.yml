@@ -1,0 +1,9 @@
+name: Qatar Airways
+link: https://www.qatarairways.com/
+logo:
+  black: logo.png
+  white: logo-wh.png
+  width: 120
+combined-logo:
+  alt: Secret Escapes & Qatar Airways
+  width: 264

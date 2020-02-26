@@ -1,0 +1,135 @@
+---
+layout: default
+---
+
+{% include variables.html %}
+
+{% if page.intro.link %} {% assign intro-link = page.intro.link %} {% else %} {% assign intro-link = page.link %} {% endif %}
+{% if page.intro.cta-label %} {% assign cta-label = page.intro.cta-label %} {% else %} {% assign cta-label = page.cta-label %} {% endif %}
+{% assign title-style = title.family | append: title.color.normal | append: title.xl | append: title.weight %}
+{% assign title-style-class = "title--xl" %}
+{% assign text-style = text.family | append: text.color.light | append: text.md | append: text.weight %}
+{% assign text-style-class = "text--md" %}
+
+{% comment %}
+  This hot mess sorts the destinations with SE offers and the ones that dont.
+  After this block there are two jekyll variables that contain a list of the
+  destination ids. These can then be looped through for each content type.
+{% endcomment %}
+{% assign destinations-with-offers = "" | split: ',' %} {% comment %} this is a stack overflow hack that basically turns the variable into an empty array that can be pushed to in a loop {% endcomment %}
+{% assign destinations-without-offers = "" | split: ',' %}
+{% for destination in page.flights.flight-list %}
+  {% assign there-is-offer = page.se-offers | where: 'id', destination.id | first %}
+  {% if there-is-offer %}
+    {% assign destinations-with-offers = destinations-with-offers | push: destination.id %}
+  {% else %}
+    {% assign destinations-without-offers = destinations-without-offers | push: destination.id %}
+  {% endif %}
+{% endfor %}
+
+{% include layout/client/header.html %}
+
+<!-- Main introduction -->
+<table {{fluid-table}}>
+  <tr>
+    <td align="center" bgcolor="{{color.grey-lightest}}" style="padding-bottom: 45px;" class="mobile-margin">
+      <table {{responsive-table}}>
+        <tr>
+          <td>
+
+            <!-- Intro section -->
+            <table {{fluid-table}}>
+              <!-- Main image -->
+              <tr>
+                <td align="center">
+                  <a href="{{intro-link}}">
+                    <img class="img-max" src="{% include img-pre.html type="C" name=page.intro.image %}" width="600" border="0" style="display: block; {{text-style}}"{% if page.intro.image-alt %} alt="{{page.intro.image-alt}}"{% endif %} />
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Intro content -->
+              <tr>
+                <td bgcolor="{{color.white}}" style="{{spacing.boxpad.md}}" class="mobile-margin">
+                  <table {{fluid-table}}>
+
+                    <!-- title -->
+                    <tr>
+                      <td align="center" style="{{title-style}} padding-bottom: {{spacing.title}};" class="{{title-style-class}}">
+                        {{page.intro.title}}
+                      </td>
+                    </tr>
+
+                    <!-- content -->
+                    {% if page.intro.content-rows %}
+                      {% for row in page.intro.content-rows %}
+                      <tr>
+                        <td align="center" style="{{text-style}} {% unless forloop.index == 1 %}padding-top: {{spacing.p}};{% endunless %}" class="{{text-style-class}}">
+                          {{row.content}}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    {% else %}
+                      <tr>
+                        <td align="center" style="{{text-style}}" class="{{text-style-class}}">
+                          {{page.intro.content}}
+                        </td>
+                      </tr>
+                    {% endif %}
+
+                    <!-- call to action -->
+                    <tr>
+                      <td style="padding-top: 20px;">
+                        {% include element/button.html link=intro-link label=cta-label style=button.partner %}
+                      </td>
+                    </tr>
+
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+
+            {% include element/space.html height="30" %}
+
+            {% for destination-id in destinations-with-offers %}
+              {% assign destination = page.flights.flight-list | where: 'id', destination-id | first %}
+              {% assign offer = page.se-offers | where: 'id', destination-id | first %}
+              <tr>
+                <td>
+                  {% for item in destination-id %}
+                    {% include element/flight-offer-card.html offer-id=item %}
+                  {% endfor %}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {% include element/space.html height="30" %}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {% include element/offer/content-one-column.html %}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {% include element/space.html height="30" %}
+                </td>
+              </tr>
+            {% endfor %}
+
+            <!-- flight offers section - with se offers  -->
+            {% for destination-id in destinations-without-offers %}
+              {% include element/flight-offer-card.html offer-id=destination-id %}
+            {% endfor %}
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+{% include layout/client/footer.html %}

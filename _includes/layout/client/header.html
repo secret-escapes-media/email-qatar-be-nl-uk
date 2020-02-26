@@ -1,0 +1,34 @@
+<!-- header -->
+<table {{fluid-table}}>
+  <tr>
+    <td bgcolor="{{color.grey-lightest}}">
+      <div align="center">
+        <table {{responsive-table}}>
+          <tr>
+            <!-- header logos -->
+            <td style="{{spacing.vpad.md}} {{spacing.hpad.sm}}" class="header-padding">
+              <table {{fluid-table}}>
+                <tr>
+                  <td width="300" align="left">
+                    <a href="{{locale.link.current-sales}}?{% include page/_amp-script/se-site-tracking.html %}" style="{{text.family}} {{text.weight}} {{text.color.normal}}">
+                      {% if page.language == 'fr' %}
+                        {% include layout/client/logo/es-black.html %}
+                      {% else %}
+                        {% include layout/client/logo/se-black.html %}
+                      {% endif %}
+                    </a>
+                  </td>
+                  <td width="300" align="right">
+                    <a href="{{page.link}}" style="{{text.family}} {{text.weight}} {{text.color.normal}}">
+                      {% include layout/client/logo/partner-black.html %}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>

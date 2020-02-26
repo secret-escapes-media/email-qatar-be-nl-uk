@@ -1,0 +1,69 @@
+{% assign flight-offer = page.flights.flight-list | where: 'id', include.offer-id | first %}
+
+<table {{fluid-table}}>
+  <tr>
+    <td>
+
+      <!-- offer -->
+      <table {{responsive-table}}>
+        <tr>
+          <td{% if page.flights.space-between and forloop.index != 1 %} style="padding-top: {{page.flights.space-between}}px;"{% endif %}>
+
+            <!-- column wrap -->
+            <table {{responsive-table}}>
+              <tr>
+                <td valign="middle">
+
+                  <!-- image-column -->
+                  <table {{table}} class="responsive-table" align="left" width="50%" height="{{page.flights.image.height}}">
+                    <tr>
+                      <td align="center" valign="middle">
+                        <!-- offer image -->
+                        <a href="{{page.link}}">
+                          {% assign flight-offer-image = flight-offer.id | append: '.jpg' %}
+                          <img class="img-max" src="{% include img-pre.html type="F" name=flight-offer-image %}" width="{{page.flights.image.width}}" height="{{page.flights.image.height}}" style="display: block;" border="0" />
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- content-column -->
+                  <table {{table}} class="responsive-table" align="right" width="49.9%" height="{{page.flights.image.height}}" bgcolor="{{color.white}}">
+                    <tr>
+                      <td align="left" valign="middle" height="{{page.flights.image.height | minus:30}}" style="{{spacing.boxpad.sm}}" class="responsive-td"> <!-- outlook needs height set on td, minus the vertical padding -->
+
+                        <table {{fluid-table}}>
+                          <!-- offer title -->
+                          <tr>
+                            <td style="{{title.family}} {{title.color.normal}} {{title.xl}} {{title.weight}}" class="title--xl">
+                              {{flight-offer.title}}
+                            </td>
+                          </tr>
+                          <!-- offer price -->
+                          <tr>
+                            <td style="{{text.family}} {{text.color.light}} {{text.sm}} {{text.weight}} padding-top: 4px;" class="text--sm">
+                              {{page.flights.price-pre}} <span style="{{text.xl}} {{text.bold}} color: {{color.partner}};">{% include price-format.html price=flight-offer.price %}</span> {{page.flights.price-post}}
+                            </td>
+                          </tr>
+                          <!-- offer call-to-action -->
+                          <tr>
+                            <td style="padding-top: 10px;">
+                              {% include element/button.html link=page.link label=page.flights.cta-label style=button.partner-light size=button.size.sm class="button--sm" align="left" %}
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
