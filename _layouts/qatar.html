@@ -90,7 +90,7 @@ layout: default
             </table>
 
 
-            {% include element/space.html height="30" %}
+            {% include element/space.html height="45" %}
 
             {% for destination-id in destinations-with-offers %}
               {% assign destination = page.flights.flight-list | where: 'id', destination-id | first %}
@@ -104,17 +104,17 @@ layout: default
               </tr>
               <tr>
                 <td>
-                  {% include element/space.html height="30" %}
+                  {% include element/space.html height="15" %}
                 </td>
               </tr>
               <tr>
                 <td>
-                  {% include element/offer/content-one-column.html %}
+                  {% include element/offer/two-col-row.html %}
                 </td>
               </tr>
               <tr>
                 <td>
-                  {% include element/space.html height="30" %}
+                  {% include element/space.html height="45" %}
                 </td>
               </tr>
             {% endfor %}
