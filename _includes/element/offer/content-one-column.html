@@ -1,3 +1,4 @@
+
 <table {{fluid-table}}>
 
   <!-- offer image -->
@@ -49,15 +50,15 @@
         <tr><!-- using <th> in this row as iOS wont allow display block on <td> -->
           <!-- percentage saving -->
           <th width="109" align="left" valign="middle" style="{{text.family}} {{text.color.light}} {{text.sm}} {{text.weight}} border-right: 1px solid {{color.grey-lighter}};" class="text--sm offer-one-column-th offer-one-column-percent">
-            save up to <span style="{{title-core.color.orange}} {{title-core.md}}">{{offer.saved}}%</span>
+            {{locale.offer.save}} <span style="{{title-core.color.orange}} {{title-core.md}}">{% unless page.language == 'uk' %}-{% endunless %}{{offer.saved}}%</span>
           </th>
           <!-- price -->
           <th width="250" align="left" valign="middle" style="{{text.family}} {{text.color.light}} {{text.sm}} {{text.weight}} padding-left: 15px; padding-right: 5px;" class="text--sm offer-one-column-th offer-one-column-price">
-            From <span style="{{title-core.color.orange}} {{title-core.md}}">£{{offer.price}}</span> {{offer.price-description}}
+            {{locale.offer.from}} <span style="{{title-core.color.orange}} {{title-core.md}}">{{locale.offer.currency}}{{offer.price}}</span> {{offer.price-description}}
           </th>
           <!-- cta button -->
           <th width="160" valign="middle" class="offer-one-column-th">
-            {% include element/button.html link=offer.link label="View Offer" style=button.orange size=button.size.sm class="button--md" align-class="offer-one-column-button" align="right" %}
+            {% include element/button.html link=offer.link label=locale.offer.button style=button.orange size=button.size.sm class="button--md" align-class="offer-one-column-button" align="right" %}
           </th>
         </tr>
 

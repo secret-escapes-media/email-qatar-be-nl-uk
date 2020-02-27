@@ -7,10 +7,10 @@ link: https://www.qatarairways.com/en-gb/offers/premium-experience.html?cid=EMGB
 cta-label: Book Now
 
 intro:
-  image: intro.jpg
-  title: Fares starting from £999 in Business Class
+  image: intro-uk.jpg
+  title: Fares starting from £1759 in Business Class
   content-rows:
-    - content: Experience a journey like never before on the World's Best Business Class, as awarded by Skytrax, with fares starting from XXX.
+    - content: Experience a journey like never before on the World's Best Business Class, as awarded by Skytrax, with fares starting from £1759.
     - content: Join Qatar Airways aboard one of the world’s youngest fleets and discover what an award-winning airline with an ever-expanding global network has to offer. Enjoy legendary hospitality, extraordinary cuisine, choose from over 4,000 entertainment options, or just sit back and enjoy your spacious sanctuary in the sky. Match your escape below with a journey that promises unparalleled comfort; because your holiday starts the minute you board.
     - content: Qatar Airways takes you to over 160 destinations from 6 UK gateways (Heathrow, Gatwick, Birmingham, Cardiff, Manchester & Edinburgh) via Doha.
 
@@ -55,8 +55,8 @@ flights:
       title: Cape Town
       price: 2679
 
-    - id: johanesburg
-      title: Johanesburg
+    - id: johannesburg
+      title: Johannesburg
       price: 2409
 
 

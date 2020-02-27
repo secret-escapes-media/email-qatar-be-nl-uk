@@ -7,8 +7,14 @@ link:
 
 # offer card text
 offer:
+  save: Tot
   from: Vanaf
   button: Bekijk deal
+  currency: €
+
+se-promo:
+  title: Tot -60% korting op luxe hotels en vakanties
+  button: Zie alle aanbiedingen
 
 footer:
   - content: >

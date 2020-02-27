@@ -16,3 +16,6 @@
 
 <!-- tracking codes marker -->
 <custom name="opencounter" type="tracking">
+  {% if page.impression-tracker %}
+  {{page.impression-tracker}}
+  {% endif %}

@@ -3,19 +3,27 @@ view-online: View online
 
 # links
 link:
-  current-sales: https://www.secretescapes.com/current-sales
+  current-sales: https://be.secretescapes.com/aanbiedingen
 
 # offer card text
 offer:
-  from: From
-  button: View offer
+  save: Tot
+  from: Vanaf
+  button: Bekijk deal
+  currency: €
+
+se-promo:
+  title: Tot -60% korting op luxe hotels en vakanties
+  button: Zie alle aanbiedingen
 
 footer:
   - content: >
-      When we’re not curating luxury escapes, we like to keep an eye out for promotions we think you’ll love – like this one. This email was written by our editorial team in partnership with {{site.data.client.name}}. We hope you enjoyed it.
+      Als we geen luxe reizen samenstellen, houden we graag een oogje in het zeil voor promoties waarvan we denken dat je ze leuk zult vinden - zoals deze. Deze e-mail is geschreven door onze redactie in samenwerking met {{site.data.client.name}}. We hopen dat het iets voor je is.
   - content: >
-      Clicking our emails will log you into Secret Escapes. To tell friends about the sales it's best to use the share buttons on the site. To get in contact, please email us at <a href="mailto:support@secretescapes.com" style="{{link-style}} text-decoration: none;">support@secretescapes.com</a> or give us a call on <a href="tel:02078872772" style="{{link-style}} text-decoration: none;">+44 (0) 207 887 2772</a>.
+      Als je op onze e-mails klikt, log je in bij Secret Escapes. Wil je een deal delen met vrienden? Dan kun je het beste de deel-knop gebruiken op onze website.
   - content: >
-      England &amp; Wales Company No. <a href="#" style="{{text-style}} text-decoration: none;">07026107</a>
+      Om contact met ons op te nemen kun je een e-mail sturen naar <a href="mailto:klantenservice@secretescapes.nl" style="{{link-style}} text-decoration: none;">klantenservice@secretescapes.nl</a> of ons bellen op <a href="tel:0207091052" style="{{link-style}} text-decoration: none;">+31 (0) 207 09 10 52</a>.
   - content: >
-      This email was sent to <a href="#" style="{{link-style}} {{text.weight}} text-decoration: none;">{% include page/_amp-script/user-email.html %}.</a> <a href="http://www.secretescapes.com/your-subscriptions?{% include page/_amp-script/se-site-tracking.html %}" style="{{link-style}} text-decoration: none;">Unsubscribe here</a>
+      Engeland & Wales Bedrijfsnummer <a href="#" style="{{text-style}} text-decoration: none;">07026107</a>
+  - content: >
+      Deze e-mail werd verstuurd naar <a href="#" style="{{link-style}} {{text.weight}} text-decoration: none;">{% include page/_amp-script/user-email.html %}.</a>. Je kunt je <a href="http://www.secretescapes.com/your-subscriptions?{% include page/_amp-script/se-site-tracking.html %}" style="{{link-style}} text-decoration: none;">hier afmelden</a>.

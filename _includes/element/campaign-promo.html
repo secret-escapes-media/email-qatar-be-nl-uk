@@ -1,12 +1,12 @@
 {% assign promo-width = 600 %}
 {% assign promo-hpad = 30 %}
 {% assign promo-vpad = 60 %}
-{% assign background-color = "#2e2e2e" %}
-{% assign background-image = "hub.jpg" %}
+{% assign background-color = "#000000" %}
+{% assign background-image = "se-promo.jpg" %}
 
 
 <!-- full width section -->
-<table {{fluid-table}} bgcolor="{{color.white}}">
+<table {{fluid-table}} bgcolor="{{color.grey-lightest}}">
   <tr>
     <td align="center" class="mobile-margin">
       <table {{responsive-table}}>
@@ -30,23 +30,26 @@
                       <td align="center" style="padding: {{promo-vpad}}px {{promo-hpad}}px;" class="mobile-margin">
                         <table {{fluid-table}}>
 
-                          <!-- title -->
+                          <!-- logo -->
                           <tr>
-                            <td align="center" style="{{title.family}} {{title.weight}} {{title.xxl}} {{title.bolder}} {{text.color.white}}" class="title--xxl">
-                              Campaign promotional title
+                            <td align="center" style="padding-bottom: 6px;">
+                              <a href="{{locale.link.current-sales}}?{% include page/_amp-script/se-site-tracking.html %}" style="{{text.family}} {{text.weight}} {{text.color.normal}}">
+                                {% include element/logo/se-large-white.html %}
+                              </a>
                             </td>
                           </tr>
 
+                          <!-- title -->
                           <tr>
-                            <td align="center" style="{{text.family}} {{text.color.light}} {{text.md}} {{text.bold}} {{text.color.white}} padding-top: 10px;" class="text--md">
-                              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, ipsam omnis rem sed voluptate dolores assumenda similique consectetur accusamus deserunt esse laudantium voluptates.
+                            <td align="center" style="{{title-core.family}} {{title-core.weight}} {{title-core.xl}} {{title-core.bolder}} {{text.color.white}}" class="title--xxl">
+                              {{locale.se-promo.title}}
                             </td>
                           </tr>
 
                           <!-- find out more - call to action -->
                           <tr>
-                            <td style="padding-top: 15px;">
-                              {% include element/button.html link="#camaign-promo-link" label="Find Out More" style=button.partner size=button.size.sm class="button--sm" %}
+                            <td style="padding-top: 12px;">
+                              {% include element/button.html link=locale.link.current-sales label=locale.se-promo.button style=button.orange size=button.size.sm class="button--sm" %}
                             </td>
                           </tr>
 

@@ -1,102 +1,80 @@
 ---
-# layout: client-travel-offers
-# language: be
-# subject-line: Grib øjeblikket med en du holder af. Priser fra 3.249 per person.
-# preheader: Din drømmeferie venter på dig.
-# link: https://www.qatarairways.com/en-dk/offers/regional-promotion.html?cid=REDK210130
-# cta-label: Book nu
+layout: qatar
+language: nl
+subject-line: Vlieg business class naar je droombestemming
+preheader: Wees er snel bij! Boeken kan t/m 4 maart voor reizen tot 10 december 2020.
+link: https://ad.doubleclick.net/ddm/trackclk/N197602.2141904SECRETESCAPES/B23834338.268794000;dc_trk_aid=463493866;dc_trk_cid=129482347;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=
+impression-tracker: '<IMG SRC="https://ad.doubleclick.net/ddm/trackimp/N197602.2141904SECRETESCAPES/B23834338.268794000;dc_trk_aid=463493866;dc_trk_cid=129482347;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?" BORDER="0" HEIGHT="1" WIDTH="1" ALT="Advertisement">'
 
-# intro:
-#   image: intro.jpg
-#   title: Grib øjeblikket med en du holder af. <br class="desktop-break">Priser fra 3.249 per person.
-#   content-rows:
-#     - content: Oplev fantastiske destinationer i hele verden. Rejs med en du holder af fra 3.249 DKK per person.
-#     - content: Selvfølgelig indgår både mad og drikke, 30 kg. bagage og reservation af sæde, når du flyver med os. Vores mål er at gøre din rejse med os til en oplevelse udover det sædvanlige.
-#     - content: Book senest 28. januar og spar.
+cta-label: Boek nu
+terms-and-conditions: Voorwaarden zijn van toepassing. Boek je ticket uiterlijk 4 maart voor reizen tot en met 10 december 2020.
 
-# offers:
-
-#   cta-label: Book nu
-#   image:
-#     width: 300
-#     height: 200
-#   space-between: 30
-
-#   offer-list:
-
-#     - title: Bangkok
-#       price:
-#         pre: Priser fra
-#         value: 3299
-#       image: dk-bangkok.jpg
-#       link: https://www.qatarairways.com/en-dk/offers/regional-promotion.html?cid=REDK210130
-
-#     - title: Bali
-#       price:
-#         pre: Priser fra
-#         value: 4549
-#         post: per person.
-#       image: dk-bali.jpg
-#       link: https://www.qatarairways.com/en-dk/offers/regional-promotion.html?cid=REDK210130
-
-#     - title: Delhi
-#       price:
-#         pre: Priser fra
-#         value: 3249
-#         post: per person.
-#       image: dk-delhi.jpg
-#       link: https://www.qatarairways.com/en-dk/offers/regional-promotion.html?cid=REDK210130
-
-#     - title: Maldives
-#       price:
-#         pre: Priser fra
-#         value: 5049
-#         post: per person.
-#       image: dk-maldives.jpg
-#       link: https://www.qatarairways.com/en-dk/offers/regional-promotion.html?cid=REDK210130
+intro:
+  image: intro-be.jpg
+  title: Profiteer van korting op business class
+  content-rows:
+    - content: Stap aan boord van Qatar Airways, een van 's werelds jongste luchtvaartmaatschappijen, en ontdek het groeiende wereldwijde netwerk. Geniet van de legendarische gastvrijheid, de buitengewone keuken en kies uit meer dan 4.000 entertainmentmogelijkheden. Leun achterover en geniet van je ruime zitplaats in de lucht. Combineer een van onze prachtige hotels hieronder met een vlucht waar je geniet van buitengewoon comfort; want je vakantie begint al op het moment dat je aan boord stapt.
 
 
-# offers-title: Kombiner dit fly med et håndplukket <br class="desktop-break">hotel fra Secret Escapes
+flights:
 
-# se-offers:
+  image:
+    width: 300
+    height: 200
+  space-between: 30
+  cta-label: Boek nu
+  price-pre: Business Class vanaf
+  price-post:
 
-#   - title: Femstjernet ophold i pulserende Bangkok
-#     location: VIE Hotel Bangkok - MGallery by Sofitel, Bangkok, Thailand
-#     description: Eksklusivt hotel med pool og terrasse nær shoppingmuligheder, inkl. morgenmad m.m.
-#     price: 845
-#     price-description: pr. værelse pr. overnatning
-#     saved: 41
-#     expires: 2020/02/03
-#     image: https://secretescapes-web.imgix.net/sales/90460/f925ead7_2c7a_4eca_ae2b_ad335216714a.jpg?auto=format,compress
-#     link: https://dk.secretescapes.com/vie-hotel-bangkok-mgallery-by-sofitel-bangkok-thailand-dk/sale
+  flight-list:
 
-#   - title: Glamour og tagterrasse i Bangkok
-#     location: Banyan Tree Bangkok, Bangkok, Thailand
-#     description: Femstjernet hotel i farverige Bangkok – ledige suiter frem til oktober 2020, inkl. morgenmad m.m.
-#     price: 1284
-#     price-description: pr. suite pr. overnatning
-#     saved: 63
-#     expires: 2020/02/03
-#     image: https://secretescapes-web.imgix.net/sales/98632/dc1296f1_2f4d_4666_b34b_9cdfba627344.jpg?auto=format,compress
-#     link: https://dk.secretescapes.com/banyan-tree-bangkok-bangkok-thailand-dk/sale
+    - id: delhi
+      title: Delhi
+      price: 1449
 
-#   - title: Idyllisk hotelperle på Bali
-#     location: Villa Mathis Umalas, Bali, Indonesien
-#     description: Afslapning på idylliske Bali tæt på natur, seværdigheder og forlystelser, inkl. morgenmad m.m.
-#     price: 669
-#     price-description: pr. værelse pr. overnatning
-#     saved: 38
-#     expires: 2020/01/27
-#     image: https://secretescapes-web.imgix.net/sales/108161/e3ab4642_4e48_496e_b096_d1262bd97ae5.jpg?auto=format,compress
-#     link: https://dk.secretescapes.com/villa-mathis-umalas-bali-indonesien/sale
+    - id: singapore
+      title: Singapore
+      price: 1809
 
-#   - title: Paradis under palmerne på Bali
-#     location: Alila Manggis Bali, Candidasa, Bali, Indonesien
-#     description: Eksklusivt resort på Balis østkyst, inkl. morgenmad, transfer m.m.
-#     price: 1008
-#     price-description: pr. værelse pr. overnatning
-#     saved: 30
-#     expires: 2020/02/03
-#     image: https://secretescapes-web.imgix.net/sales/58819/ee3604bd_5a98_4b28_8754_b4ee0ed8ee6e.jpg?auto=format,compress
-#     link: https://dk.secretescapes.com/alila-manggis-bali-candidasa-bali-indonesien/sale
+    - id: bangkok
+      title: Bangkok
+      price: 1809
+
+    - id: bali
+      title: Bali
+      price: 2209
+
+    - id: phuket
+      title: Phuket
+      price: 2409
+
+    - id: maldives
+      title: Malediven
+      price: 2439
+
+
+se-offers:
+
+  - id: bangkok
+    title: Lancaster Bangkok
+    location: Lancaster Bangkok, Thailand
+    description: Stijlvol wellnesshotel met dakterras
+    price: 79
+    price-description: per kamer per nacht
+    saved: 41
+    expires: 2020/03/09
+    image: https://secretescapes-web.imgix.net/hotels/208/05addb90_5d60_4205_bfd2_cf12b3ae3cb9.jpg?auto=format,compress
+    link: https://nl.secretescapes.com/lancaster-bangkok-bangkok-thailand-nl/sale-hotel
+
+  - id: maldives
+    title: LUX South Ari Atoll
+    location: Maamigili, Malediven
+    description: 5*-Verblijf met een heus privé-eiland genaamd Dhidhoofinolhu
+    price: 522
+    price-description: per kamer per nacht
+    saved: 74
+    expires: 2020/03/02
+    image: https://secretescapes-web.imgix.net/sales/110736/89c4be0b_bb14_41b2_b99f_1f6cc3ce6438.jpg?auto=format,compress
+    link: https://be.secretescapes.com/lux-south-ari-atoll-maamigili-malediven-be/sale
+
 ---
